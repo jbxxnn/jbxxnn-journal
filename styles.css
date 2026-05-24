@@ -196,11 +196,11 @@ h1, h2, h3, p { margin-top: 0; }
 
 .article-card h3 {
   margin: 0;
-  font-size: 22px;
-  line-height: 1.12;
+  font-size: 20px;
+  line-height: 1.15;
   letter-spacing: -0.04em;
 }
-.article-card p { color: var(--muted); line-height: 1.65; }
+.article-card p { color: var(--muted); font-size: 15px; line-height: 1.55; }
 
 .author-row {
   margin-top: auto;
@@ -271,6 +271,11 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .blog-toolbar { align-items: stretch; flex-direction: column; }
   .search-box { min-width: 0; }
   .article-grid { grid-template-columns: 1fr; }
+  .article-card { min-height: 244px; }
+  .article-card a { padding: 24px; gap: 14px; }
+  .article-card-large h3 { font-size: 24px; line-height: 1.08; }
+  .article-card h3 { font-size: 23px; line-height: 1.08; }
+  .article-card p { font-size: 16px; line-height: 1.5; }
   .site-footer { flex-direction: column; }
 }
 
