@@ -17,7 +17,7 @@ const byDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
 function card(post, size = 'normal') {
   return `
     <article class="article-card ${size === 'large' ? 'article-card-large' : ''}">
-      <a href="/post.html?slug=${encodeURIComponent(post.slug)}">
+      <a href="/post?slug=${encodeURIComponent(post.slug)}">
         <div class="card-label">
           <span>${escapeHTML(post.category)}</span>
           <time datetime="${escapeHTML(post.date)}">${formatDate(post.date)}</time>
@@ -43,7 +43,7 @@ function renderCategories() {
   const holder = document.querySelector('[data-categories]');
   if (!holder) return;
   holder.innerHTML = uniqueCategories()
-    .map((category, index) => `<button class="${index === 0 ? 'active' : ''}" data-category="${category}">${category === 'All' ? 'All Posts' : category}</button>`)
+    .map((category, index) => `<button class="${index === 0 ? 'active' : ''}" data-category="${escapeHTML(category)}">${category === 'All' ? 'All Posts' : escapeHTML(category)}</button>`)
     .join('');
 }
 
