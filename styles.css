@@ -262,7 +262,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 .post-article h1 { font-size: clamp(42px, 8vw, 76px); line-height: .98; letter-spacing: -0.07em; margin-bottom: 22px; }
 .post-excerpt { color: var(--muted); font-size: 20px; line-height: 1.65; margin-bottom: 42px; }
 .post-body { border-top: 1px solid var(--line); padding-top: 30px; }
-.post-body p { color: #2f2f2f; font-size: 18px; line-height: 1.85; }
+.post-body p { color: #2f2f2f; font-size: 16px; line-height: 1.75; }
 
 @media (max-width: 860px) {
   .top-nav { display: none; }
