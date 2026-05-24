@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jibrin Journal — essays, field notes, systems, and quiet progress." />
+    <title>Jibrin Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Jibrin Journal home">
+        <span class="brand-mark">J</span>
+        <span>Jibrin Journal</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#featured">Featured</a>
+        <a href="#latest">Latest</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="header-action" href="mailto:hello@example.com">Contact</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-grid" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal blog / journal</p>
+          <h1 id="page-title">Clear notes on building, thinking, and becoming.</h1>
+          <p class="hero-text">A clean editorial home for essays, operating notes, project logs, and lessons learned — built with a precise grid, quiet typography, and fast static publishing.</p>
+        </div>
+        <aside class="hero-panel" id="about">
+          <p class="panel-label">Current focus</p>
+          <p>Systems, creative work, automation, online business, and documenting the process with enough clarity to make the next step easier.</p>
+        </aside>
+      </section>
+
+      <section class="blog-toolbar" aria-label="Blog tools">
+        <div class="category-tabs" data-categories>
+          <button class="active" data-category="All">All Posts</button>
+        </div>
+        <label class="search-box">
+          <span>Search posts</span>
+          <input type="search" placeholder="Search posts" data-search />
+        </label>
+      </section>
+
+      <section class="section-block" id="featured" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected</p>
+          <h2 id="featured-title">Featured essays</h2>
+        </div>
+        <div class="article-grid featured-grid" data-featured-grid></div>
+      </section>
+
+      <section class="section-block" id="latest" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2 id="latest-title">Latest notes</h2>
+        </div>
+        <div class="article-grid" data-posts-grid></div>
+      </section>
+
+      <section class="cta-grid">
+        <div>
+          <p class="eyebrow">Publishing system</p>
+          <h2>Write, commit, publish.</h2>
+        </div>
+        <p>Add a new entry to <code>posts.js</code>, push to GitHub, and Vercel serves the update globally.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> Jibrin Journal</span>
+      <span>Built for fast writing and clean reading.</span>
+    </footer>
+
+    <script src="/posts.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Read an entry from Jibrin Journal." />
+    <title>Entry — Jibrin Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Jibrin Journal home">
+        <span class="brand-mark">J</span>
+        <span>Jibrin Journal</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="/#featured">Featured</a>
+        <a href="/#latest">Latest</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="header-action" href="/">Index</a>
+    </header>
+
+    <main class="page-shell post-shell">
+      <article class="post-article" data-post-article>
+        <a class="back-link" href="/">← Back to journal</a>
+        <div class="post-meta" data-post-meta></div>
+        <h1 data-post-title>Loading entry…</h1>
+        <p class="post-excerpt" data-post-excerpt></p>
+        <div class="post-body" data-post-body></div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> Jibrin Journal</span>
+      <span>Built for fast writing and clean reading.</span>
+    </footer>
+
+    <script src="/posts.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
