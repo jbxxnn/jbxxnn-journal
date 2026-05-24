@@ -1,5 +1,12 @@
 const posts = window.JOURNAL_POSTS || [];
 
+const escapeHTML = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#039;');
+
 const formatDate = (value) => {
   const date = new Date(`${value}T00:00:00`);
   return date.toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -12,16 +19,16 @@ function card(post, size = 'normal') {
     <article class="article-card ${size === 'large' ? 'article-card-large' : ''}">
       <a href="/post.html?slug=${encodeURIComponent(post.slug)}">
         <div class="card-label">
-          <span>${post.category}</span>
-          <time datetime="${post.date}">${formatDate(post.date)}</time>
+          <span>${escapeHTML(post.category)}</span>
+          <time datetime="${escapeHTML(post.date)}">${formatDate(post.date)}</time>
         </div>
-        <h3>${post.title}</h3>
-        <p>${post.excerpt}</p>
+        <h3>${escapeHTML(post.title)}</h3>
+        <p>${escapeHTML(post.excerpt)}</p>
         <div class="author-row">
-          <span class="avatar" aria-hidden="true">${post.author.slice(0, 1)}</span>
-          <span>${post.author}</span>
+          <span class="avatar" aria-hidden="true">${escapeHTML(post.author.slice(0, 1))}</span>
+          <span>${escapeHTML(post.author)}</span>
           <span class="dot" aria-hidden="true"></span>
-          <span>${post.readingTime}</span>
+          <span>${escapeHTML(post.readingTime)}</span>
         </div>
       </a>
     </article>
@@ -94,10 +101,10 @@ function renderPost() {
   }
 
   document.title = `${post.title} — Jibrin Journal`;
-  document.querySelector('[data-post-meta]').innerHTML = `<span>${post.category}</span><span>${formatDate(post.date)}</span><span>${post.readingTime}</span>`;
+  document.querySelector('[data-post-meta]').innerHTML = `<span>${escapeHTML(post.category)}</span><span>${formatDate(post.date)}</span><span>${escapeHTML(post.readingTime)}</span>`;
   document.querySelector('[data-post-title]').textContent = post.title;
   document.querySelector('[data-post-excerpt]').textContent = post.excerpt;
-  document.querySelector('[data-post-body]').innerHTML = post.body.map((paragraph) => `<p>${paragraph}</p>`).join('');
+  document.querySelector('[data-post-body]').innerHTML = post.body.map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`).join('');
 }
 
 function boot() {
