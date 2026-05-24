@@ -200,7 +200,7 @@ h1, h2, h3, p { margin-top: 0; }
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
-.article-card p { color: var(--muted); font-size: 15px; line-height: 1.55; }
+.article-card p { color: var(--muted); font-size: 14px; line-height: 1.42; }
 
 .author-row {
   margin-top: auto;
@@ -273,9 +273,9 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .article-grid { grid-template-columns: 1fr; }
   .article-card { min-height: 244px; }
   .article-card a { padding: 24px; gap: 14px; }
-  .article-card-large h3 { font-size: 24px; line-height: 1.08; }
-  .article-card h3 { font-size: 23px; line-height: 1.08; }
-  .article-card p { font-size: 16px; line-height: 1.5; }
+  .article-card-large h3 { font-size: 22px; line-height: 1.02; }
+  .article-card h3 { font-size: 21px; line-height: 1.03; }
+  .article-card p { font-size: 14px; line-height: 1.38; }
   .site-footer { flex-direction: column; }
 }
 
