@@ -200,7 +200,7 @@ h1, h2, h3, p { margin-top: 0; }
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
-.article-card p { color: var(--muted); font-size: 14px; line-height: 1.42; }
+.article-card p { color: #3f3f3f; font-size: 14px; line-height: 1.42; }
 
 .author-row {
   margin-top: auto;
