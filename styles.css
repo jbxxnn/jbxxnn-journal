@@ -407,6 +407,17 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   letter-spacing: 0;
   font-weight: 400;
 }
+.post-body blockquote {
+  margin: 4px 0 14px 20px;
+  padding: 10px 14px;
+  border-left: 2px solid var(--line-strong);
+  background: #fafafa;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.42;
+  letter-spacing: 0;
+  font-weight: 500;
+}
 
 @media (max-width: 860px) {
   .top-nav { display: none; }
@@ -432,6 +443,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .post-body li { font-size: 15px; line-height: 1.38; }
   .post-body ul { gap: 8px; margin: -2px 0 18px 18px; }
   .post-body p:first-child { font-size: 15px; line-height: 1.38; }
+  .post-body blockquote { margin: 4px 0 13px 18px; padding: 9px 12px; font-size: 15px; line-height: 1.38; }
 }
 
 @media (min-width: 861px) and (max-width: 1080px) {

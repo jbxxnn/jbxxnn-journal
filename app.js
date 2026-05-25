@@ -106,6 +106,12 @@ function renderPostParagraph(paragraph) {
     }
   }
 
+  const questionShiftMatch = paragraph.match(/^(When a system moves into production, the question changes from:) (.+\?) (To:) (.+\?)$/);
+  if (questionShiftMatch) {
+    const [, intro, firstQuote, connector, secondQuote] = questionShiftMatch;
+    return `<p>${escapeHTML(intro)}</p><blockquote>${escapeHTML(firstQuote)}</blockquote><p>${escapeHTML(connector)}</p><blockquote>${escapeHTML(secondQuote)}</blockquote>`;
+  }
+
   return `<p>${escapeHTML(paragraph)}</p>`;
 }
 
