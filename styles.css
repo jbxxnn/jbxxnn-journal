@@ -369,43 +369,43 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   padding-top: 0;
 }
 .post-body p {
-  margin: 0 0 20px;
-  color: #262626;
-  font-size: 16px;
-  line-height: 1.72;
-  letter-spacing: -0.004em;
+  margin: 0 0 16px;
+  color: #3f3f3f;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0;
 }
 .post-body ul {
-  margin: -4px 0 24px;
+  margin: -2px 0 18px;
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 .post-body li {
   position: relative;
-  padding-left: 22px;
-  color: #262626;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: -0.004em;
+  padding-left: 18px;
+  color: #3f3f3f;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0;
 }
 .post-body li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: .72em;
-  width: 5px;
-  height: 5px;
+  top: .68em;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--text);
 }
 .post-body p:first-child {
-  color: var(--text);
-  font-size: 18px;
-  line-height: 1.62;
-  letter-spacing: -0.018em;
-  font-weight: 500;
+  color: #3f3f3f;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0;
+  font-weight: 400;
 }
 
 @media (max-width: 860px) {
@@ -428,10 +428,10 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .post-layout { display: block; padding: 30px 22px 44px; }
   .post-aside { position: static; margin-bottom: 26px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
   .post-body { max-width: none; }
-  .post-body p { font-size: 15.5px; line-height: 1.68; margin-bottom: 18px; }
-  .post-body li { font-size: 15.5px; line-height: 1.58; }
-  .post-body ul { gap: 9px; margin-bottom: 22px; }
-  .post-body p:first-child { font-size: 17px; line-height: 1.58; }
+  .post-body p { font-size: 14px; line-height: 1.38; margin-bottom: 15px; }
+  .post-body li { font-size: 14px; line-height: 1.38; }
+  .post-body ul { gap: 8px; margin-bottom: 17px; }
+  .post-body p:first-child { font-size: 14px; line-height: 1.38; }
 }
 
 @media (min-width: 861px) and (max-width: 1080px) {
