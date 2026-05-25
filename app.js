@@ -104,11 +104,7 @@ function renderPost() {
   document.querySelector('[data-post-meta]').innerHTML = `<span>${escapeHTML(post.category)}</span><span>${formatDate(post.date)}</span><span>${escapeHTML(post.readingTime)}</span>`;
   document.querySelector('[data-post-title]').textContent = post.title;
   document.querySelector('[data-post-excerpt]').textContent = post.excerpt;
-  document.querySelector('[data-post-body]').innerHTML = post.body.map((paragraph) => {
-    const text = escapeHTML(paragraph);
-    const isEmphasis = paragraph.length <= 90 && !paragraph.includes('?') && !paragraph.includes(':');
-    return `<p class="${isEmphasis ? 'prose-emphasis' : ''}">${text}</p>`;
-  }).join('');
+  document.querySelector('[data-post-body]').innerHTML = post.body.map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`).join('');
 }
 
 function boot() {
