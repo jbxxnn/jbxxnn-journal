@@ -63,18 +63,32 @@
         <div class="article-grid" data-posts-grid></div>
       </section>
 
-      <section class="cta-grid">
+      <section class="cta-grid" aria-labelledby="closing-title">
         <div>
-          <p class="eyebrow">Publishing system</p>
-          <h2>Write, commit, publish.</h2>
+          <p class="eyebrow">Operating rhythm</p>
+          <h2 id="closing-title">Document the work. Improve the system.</h2>
         </div>
-        <p>Add a new entry to <code>posts.js</code>, push to GitHub, and Vercel serves the update globally.</p>
+        <div class="cta-copy">
+          <p>This journal keeps track of the decisions, client-work lessons, systems, experiments, and small observations that make the next step clearer.</p>
+          <ul>
+            <li>Build logs when something ships.</li>
+            <li>Notes when a lesson is worth keeping.</li>
+            <li>Systems when a process starts to repeat.</li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© <span data-year></span> Jibrin Journal</span>
-      <span>Built for fast writing and clean reading.</span>
+      <div class="footer-brand">
+        <span>© <span data-year></span> Jibrin Journal</span>
+        <span>Field notes on software, systems, creative work, and becoming better at the craft.</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#featured">Featured</a>
+        <a href="#latest">Latest</a>
+        <a href="mailto:jbxxnn6@gmail.com">Contact</a>
+      </nav>
     </footer>
 
     <script src="/posts.js"></script>
