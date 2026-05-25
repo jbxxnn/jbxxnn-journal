@@ -431,7 +431,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .hero-grid, .cta-grid { grid-template-columns: 1fr; }
   .hero-panel { border-left: 0; border-top: 1px solid var(--line); }
   .blog-toolbar { align-items: stretch; flex-direction: column; }
-  .search-box { min-width: 0; }
+  .search-box { display: none; }
   .article-grid { grid-template-columns: 1fr; }
   .article-card { min-height: 244px; }
   .article-card a { padding: 24px; gap: 14px; }
