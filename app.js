@@ -17,7 +17,7 @@ const byDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
 function card(post, size = 'normal') {
   return `
     <article class="article-card ${size === 'large' ? 'article-card-large' : ''}">
-      <a href="/post?slug=${encodeURIComponent(post.slug)}">
+      <a href="/${encodeURIComponent(post.slug)}">
         <div class="card-label">
           <span>${escapeHTML(post.category)}</span>
           <time datetime="${escapeHTML(post.date)}">${formatDate(post.date)}</time>
@@ -119,7 +119,9 @@ function renderPost() {
   const article = document.querySelector('[data-post-article]');
   if (!article) return;
 
-  const slug = new URLSearchParams(window.location.search).get('slug') || posts[0]?.slug;
+  const querySlug = new URLSearchParams(window.location.search).get('slug');
+  const pathSlug = window.location.pathname.split('/').filter(Boolean)[0];
+  const slug = querySlug || (pathSlug !== 'post' ? pathSlug : null) || posts[0]?.slug;
   const post = posts.find((item) => item.slug === slug);
 
   if (!post) {
