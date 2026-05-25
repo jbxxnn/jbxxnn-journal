@@ -370,7 +370,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 }
 .post-body p {
   margin: 0 0 22px;
-  color: #3f3f3f;
+  color: #191919;
   font-size: 15px;
   line-height: 1.62;
   letter-spacing: 0;
@@ -385,7 +385,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 .post-body li {
   position: relative;
   padding-left: 14px;
-  color: #3f3f3f;
+  color: #191919;
   font-size: 15px;
   line-height: 1.56;
   letter-spacing: 0;
@@ -401,7 +401,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   background: var(--text);
 }
 .post-body p:first-child {
-  color: #3f3f3f;
+  color: #191919;
   font-size: 15px;
   line-height: 1.62;
   letter-spacing: 0;
