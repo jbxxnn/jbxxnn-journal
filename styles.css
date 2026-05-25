@@ -375,6 +375,31 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   line-height: 1.72;
   letter-spacing: -0.004em;
 }
+.post-body ul {
+  margin: -4px 0 24px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.post-body li {
+  position: relative;
+  padding-left: 22px;
+  color: #262626;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: -0.004em;
+}
+.post-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text);
+}
 .post-body p:first-child {
   color: var(--text);
   font-size: 18px;
@@ -404,6 +429,8 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .post-aside { position: static; margin-bottom: 26px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
   .post-body { max-width: none; }
   .post-body p { font-size: 15.5px; line-height: 1.68; margin-bottom: 18px; }
+  .post-body li { font-size: 15.5px; line-height: 1.58; }
+  .post-body ul { gap: 9px; margin-bottom: 22px; }
   .post-body p:first-child { font-size: 17px; line-height: 1.58; }
 }
 

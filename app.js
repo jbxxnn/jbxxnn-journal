@@ -88,6 +88,27 @@ function renderIndex() {
   apply();
 }
 
+function renderPostParagraph(paragraph) {
+  const questionListMatch = paragraph.match(/^(More like:) (.+)$/);
+  if (questionListMatch) {
+    const [, intro, itemsText] = questionListMatch;
+    const items = itemsText.match(/[^?]+\?/g) || [];
+    if (items.length > 1) {
+      return `<p>${escapeHTML(intro)}</p><ul>${items.map((item) => `<li>${escapeHTML(item.trim())}</li>`).join('')}</ul>`;
+    }
+  }
+
+  const trustListMatch = paragraph.match(/^(It is the fact .+)$/);
+  if (trustListMatch) {
+    const items = paragraph.split(/(?=It is )/).filter(Boolean);
+    if (items.length > 2) {
+      return `<ul>${items.map((item) => `<li>${escapeHTML(item.trim())}</li>`).join('')}</ul>`;
+    }
+  }
+
+  return `<p>${escapeHTML(paragraph)}</p>`;
+}
+
 function renderPost() {
   const article = document.querySelector('[data-post-article]');
   if (!article) return;
@@ -104,7 +125,7 @@ function renderPost() {
   document.querySelector('[data-post-meta]').innerHTML = `<span>${escapeHTML(post.category)}</span><span>${formatDate(post.date)}</span><span>${escapeHTML(post.readingTime)}</span>`;
   document.querySelector('[data-post-title]').textContent = post.title;
   document.querySelector('[data-post-excerpt]').textContent = post.excerpt;
-  document.querySelector('[data-post-body]').innerHTML = post.body.map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`).join('');
+  document.querySelector('[data-post-body]').innerHTML = post.body.map(renderPostParagraph).join('');
 }
 
 function boot() {
