@@ -5,18 +5,38 @@ window.JOURNAL_POSTS = [
     category: 'Build Log',
     date: '2026-05-25',
     author: 'Jibrin Faruna',
-    readingTime: '3 min read',
+    readingTime: '5 min read',
     featured: true,
-    excerpt: 'What changes when a client project moves from a few tasks into software people rely on.',
+    excerpt: 'A note on the moment client software stops being just code and becomes trust, operations, and responsibility.',
     body: [
-      'Software feels different when people depend on it.',
-      'At first, client work can look simple: a page, a form, a dashboard, a fix. You are thinking about the visible parts of the system and the next feature to ship.',
-      'But the moment real operations start running through the product, the work changes. It is no longer just about building. It is about reliability, trust, and responsibility.',
-      'I have been working on a client system that grew from ordinary web support into something closer to operational software. That shift forced me to think beyond screens and code.',
-      'The better questions became practical ones: where do mistakes happen, what slows the team down, what information needs to be available, and what happens if the system is not working?',
-      'Those questions make software more serious. A product is not only the codebase. It is the workflow around it, the data it protects, the people who expect it to be available, and the communication required when something changes.',
-      'This is the lesson I am taking from it: good client software needs clear ownership, careful maintenance, and honest expectations. The technical work matters, but the operating responsibility matters just as much.',
-      'A small support role can become a product role when you stay close enough to the real problems. That is the kind of work I want to keep improving at: building systems that are not just impressive, but useful enough to carry real use.'
+      'There is a point where software stops feeling like code.',
+      'At the beginning, it is usually simple: a page, a form, a fix, a dashboard, a feature request. You are thinking about components, database tables, authentication, deployment, and all the little details that make something work.',
+      'But once real people start depending on it, the feeling changes.',
+      'It becomes responsibility.',
+      'I have been working on a client software system that started from a much smaller relationship. At first, the work was closer to ordinary web support: maintain the website, fix issues, keep things running, respond when something breaks. Over time, the work became more connected to the actual operations of the business.',
+      'That is when the interesting problems appeared.',
+      'Not just: make this page look better.',
+      'More like: how does the business actually handle bookings? Where do repeated mistakes happen? What information do staff need at the right moment? Which manual steps are slowing people down? What should be visible to the client, the admin, and the team? What happens when the system is not available?',
+      'Those questions are different from normal feature requests. They force you to understand the business behind the screen.',
+      'And when you understand the business deeply enough, software becomes less about adding features and more about reducing operational friction.',
+      'That shift taught me something important: a real product is not just the codebase. It is the trust around it.',
+      'It is the fact that someone wakes up and expects it to work. It is the data that needs to be protected. It is the workflow that cannot randomly fail. It is the support message that arrives when something goes wrong. It is the quiet maintenance nobody sees when everything is working.',
+      'This is the part of software that is easy to underestimate when you are only thinking like a builder.',
+      'Building is exciting. Operating is sobering.',
+      'When a system moves into production, the question changes from: can I build this? To: can I be responsible for this?',
+      'That responsibility includes the technical parts: hosting, database structure, security, backups, performance, monitoring, and deployment.',
+      'But it also includes the human parts: communication, clarity, expectations, ownership, and trust.',
+      'One thing I am learning is that client software needs more than good code. It needs clear agreements around who owns what, who maintains what, who pays for what, and what happens when the system grows beyond its original shape.',
+      'Those conversations are not always urgent at the beginning. But if the software becomes important enough, they eventually become necessary.',
+      'And that is a good sign.',
+      'It means the work has moved from being a task to being infrastructure.',
+      'For me, this is one of the more serious lessons from the past season of work: the best software opportunities often come from staying close to real operations long enough to see what is broken.',
+      'Not from guessing. Not from chasing random ideas. But from paying attention.',
+      'A small support role can become a product role. A website task can become an operational system. A client relationship can become a long-term technical responsibility.',
+      'That is the kind of work I want to get better at.',
+      'Not just building things that look good in a portfolio, but building things that can carry real use.',
+      'Software becomes different when people depend on it.',
+      'And that is exactly why it matters.'
     ]
   },
   {
@@ -95,5 +115,3 @@ window.JOURNAL_POSTS = [
     ]
   }
 ];
-
-
