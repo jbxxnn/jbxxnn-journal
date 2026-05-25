@@ -408,15 +408,28 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   font-weight: 400;
 }
 .post-body blockquote {
-  margin: 4px 0 14px 20px;
-  padding: 10px 14px;
-  border-left: 2px solid var(--line-strong);
-  background: #fafafa;
+  position: relative;
+  margin: 6px 0 14px;
+  padding: 14px 16px 14px 44px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
   color: var(--text);
   font-size: 15px;
   line-height: 1.42;
   letter-spacing: 0;
   font-weight: 500;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+}
+.post-body blockquote::before {
+  content: '“';
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  color: #a3a3a3;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  line-height: 1;
 }
 
 @media (max-width: 860px) {
@@ -443,7 +456,8 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .post-body li { font-size: 15px; line-height: 1.38; }
   .post-body ul { gap: 8px; margin: -2px 0 18px 18px; }
   .post-body p:first-child { font-size: 15px; line-height: 1.38; }
-  .post-body blockquote { margin: 4px 0 13px 18px; padding: 9px 12px; font-size: 15px; line-height: 1.38; }
+  .post-body blockquote { margin: 5px 0 13px; padding: 13px 14px 13px 40px; font-size: 15px; line-height: 1.38; border-radius: 12px; }
+  .post-body blockquote::before { left: 14px; top: 8px; font-size: 30px; }
 }
 
 @media (min-width: 861px) and (max-width: 1080px) {
