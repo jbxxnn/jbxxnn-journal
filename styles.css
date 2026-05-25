@@ -369,25 +369,25 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   padding-top: 0;
 }
 .post-body p {
-  margin: 0 0 16px;
+  margin: 0 0 22px;
   color: #3f3f3f;
   font-size: 15px;
-  line-height: 1.42;
+  line-height: 1.62;
   letter-spacing: 0;
 }
 .post-body ul {
-  margin: -2px 0 20px 20px;
+  margin: -6px 0 26px 20px;
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 8px;
+  gap: 11px;
 }
 .post-body li {
   position: relative;
   padding-left: 14px;
   color: #3f3f3f;
   font-size: 15px;
-  line-height: 1.42;
+  line-height: 1.56;
   letter-spacing: 0;
 }
 .post-body li::before {
@@ -403,29 +403,26 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 .post-body p:first-child {
   color: #3f3f3f;
   font-size: 15px;
-  line-height: 1.42;
+  line-height: 1.62;
   letter-spacing: 0;
   font-weight: 400;
 }
 .post-body blockquote {
   position: relative;
-  margin: 6px 0 14px;
-  padding: 14px 16px 14px 44px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+  margin: -4px 0 24px;
+  padding: 2px 0 2px 34px;
   color: var(--text);
   font-size: 15px;
-  line-height: 1.42;
+  line-height: 1.62;
   letter-spacing: 0;
+  font-style: italic;
   font-weight: 500;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
 }
 .post-body blockquote::before {
   content: '“';
   position: absolute;
-  left: 15px;
-  top: 8px;
+  left: 0;
+  top: -2px;
   color: #a3a3a3;
   font-family: Georgia, serif;
   font-size: 34px;
@@ -452,12 +449,12 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .post-layout { display: block; padding: 30px 22px 44px; }
   .post-aside { position: static; margin-bottom: 26px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
   .post-body { max-width: none; }
-  .post-body p { font-size: 15px; line-height: 1.38; margin-bottom: 15px; }
-  .post-body li { font-size: 15px; line-height: 1.38; }
-  .post-body ul { gap: 8px; margin: -2px 0 18px 18px; }
-  .post-body p:first-child { font-size: 15px; line-height: 1.38; }
-  .post-body blockquote { margin: 5px 0 13px; padding: 13px 14px 13px 40px; font-size: 15px; line-height: 1.38; border-radius: 12px; }
-  .post-body blockquote::before { left: 14px; top: 8px; font-size: 30px; }
+  .post-body p { font-size: 15px; line-height: 1.56; margin-bottom: 20px; }
+  .post-body li { font-size: 15px; line-height: 1.5; }
+  .post-body ul { gap: 10px; margin: -5px 0 24px 18px; }
+  .post-body p:first-child { font-size: 15px; line-height: 1.56; }
+  .post-body blockquote { margin: -3px 0 22px; padding: 2px 0 2px 32px; font-size: 15px; line-height: 1.56; font-style: italic; }
+  .post-body blockquote::before { left: 0; top: -2px; font-size: 30px; }
 }
 
 @media (min-width: 861px) and (max-width: 1080px) {
