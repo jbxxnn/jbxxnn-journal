@@ -203,7 +203,7 @@
             <li>Useful even if you do not hire me</li>
           </ul>
         </div>
-        <form class="lead-form" action="mailto:jbxxnn6@gmail.com" method="post" enctype="text/plain" data-audit-form>
+        <form class="lead-form" action="/api/audit-submit" method="post" data-audit-form>
           <label> Your name
             <input name="name" type="text" autocomplete="name" placeholder="Jane Smith" required />
           </label>
@@ -215,6 +215,9 @@
           </label>
           <label> Email
             <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+          <label> Country
+            <input name="country" type="text" autocomplete="country-name" placeholder="United Kingdom" />
           </label>
           <label> What do you want more of?
             <select name="goal" required>
@@ -230,8 +233,12 @@
           <label> Anything I should know?
             <textarea name="message" rows="4" placeholder="Tell me what feels broken, outdated, slow, or unclear."></textarea>
           </label>
-          <button class="primary-button form-button" type="submit">Email my audit request</button>
-          <p class="form-note">This opens your email app with the details filled in. A connected form backend can be added next.</p>
+          <label class="hp-field" aria-hidden="true" tabindex="-1"> Company URL
+            <input name="company_url" type="text" autocomplete="off" tabindex="-1" />
+          </label>
+          <button class="primary-button form-button" type="submit" data-submit-button>Request my free audit</button>
+          <p class="form-note">Your request is saved securely so I can review the website and reply by email.</p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </section>
 
@@ -264,23 +271,40 @@
       document.querySelector('[data-year]').textContent = new Date().getFullYear();
       const form = document.querySelector('[data-audit-form]');
       if (form) {
-        form.addEventListener('submit', (event) => {
+        const status = form.querySelector('[data-form-status]');
+        const button = form.querySelector('[data-submit-button]');
+        const setStatus = (message, type = '') => {
+          if (!status) return;
+          status.textContent = message;
+          status.dataset.state = type;
+        };
+
+        form.addEventListener('submit', async (event) => {
           event.preventDefault();
           const data = new FormData(form);
-          const lines = [
-            'Hi Jibrin, I want a free 3-point WordPress website audit.',
-            '',
-            `Name: ${data.get('name') || ''}`,
-            `Business: ${data.get('business') || ''}`,
-            `Website: ${data.get('website') || ''}`,
-            `Email: ${data.get('email') || ''}`,
-            `Goal: ${data.get('goal') || ''}`,
-            '',
-            `Notes: ${data.get('message') || ''}`,
-          ];
-          const subject = encodeURIComponent('Free WordPress website audit request');
-          const body = encodeURIComponent(lines.join('\n'));
-          window.location.href = `mailto:jbxxnn6@gmail.com?subject=${subject}&body=${body}`;
+          const payload = Object.fromEntries(data.entries());
+          payload.pageUrl = window.location.href;
+
+          setStatus('Sending your request...', 'loading');
+          if (button) button.disabled = true;
+
+          try {
+            const response = await fetch('/api/audit-submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.ok) {
+              throw new Error(result.message || 'Unable to send your request right now.');
+            }
+            form.reset();
+            setStatus(result.message || 'Thanks — your audit request has been received.', 'success');
+          } catch (error) {
+            setStatus(`${error.message || 'Something went wrong.'} You can also email jbxxnn6@gmail.com directly.`, 'error');
+          } finally {
+            if (button) button.disabled = false;
+          }
         });
       }
     </script>

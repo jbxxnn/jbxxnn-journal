@@ -618,7 +618,25 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 .lead-form textarea { min-height: 104px; padding-top: 11px; resize: vertical; }
 .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { border-color: var(--text); box-shadow: 0 0 0 4px rgba(0,0,0,.08); background: white; }
 .form-button { width: 100%; border: 0; cursor: pointer; font-family: var(--sans); }
+.form-button:disabled { cursor: wait; opacity: .68; transform: none; }
 .form-note { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.form-status {
+  min-height: 20px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.form-status[data-state="success"] { color: #166534; }
+.form-status[data-state="error"] { color: #b42318; }
+.form-status[data-state="loading"] { color: var(--muted); }
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
 .faq-section { margin-top: 52px; }
 .faq-section > h2 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -.055em; }
 .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
