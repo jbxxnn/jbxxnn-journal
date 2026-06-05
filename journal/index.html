@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jibrin Journal — essays, field notes, systems, and quiet progress." />
+    <title>Jibrin Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Jibrin Journal home">
+        <img class="brand-mark" src="/assets/jbxxnn.svg" alt="" aria-hidden="true" />
+        <span>Jibrin Journal</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#featured">Featured</a>
+        <a href="#latest">Latest</a>
+        <a href="/wordpress/">WordPress</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="header-action" href="/wordpress/">Free website audit</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-grid" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal blog / journal</p>
+          <h1 id="page-title">Notes from building useful things, slowly and seriously.</h1>
+          <p class="hero-text">A public operating log on client work, software, systems, automation, and the small decisions that compound into better work.</p>
+        </div>
+        <aside class="hero-panel" id="about">
+          <p class="panel-label">Current focus</p>
+          <p>Building and maintaining software for real clients, improving my systems, experimenting with media, and documenting the lessons clearly as I go.</p>
+        </aside>
+      </section>
+
+      <section class="blog-toolbar" aria-label="Blog tools">
+        <div class="category-tabs" data-categories>
+          <button class="active" data-category="All">All Posts</button>
+        </div>
+        <label class="search-box">
+          <span>Search posts</span>
+          <input type="search" placeholder="Search posts" data-search />
+        </label>
+      </section>
+
+      <section class="section-block" id="featured" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected</p>
+          <h2 id="featured-title">Featured essays</h2>
+        </div>
+        <div class="article-grid featured-grid" data-featured-grid></div>
+      </section>
+
+      <section class="section-block" id="latest" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2 id="latest-title">Latest notes</h2>
+        </div>
+        <div class="article-grid" data-posts-grid></div>
+      </section>
+
+      <section class="cta-grid" aria-labelledby="closing-title">
+        <div>
+          <p class="eyebrow">Operating rhythm</p>
+          <h2 id="closing-title">Document the work. Improve the system.</h2>
+        </div>
+        <div class="cta-copy">
+          <p>This journal keeps track of the decisions, client-work lessons, systems, experiments, and small observations that make the next step clearer.</p>
+          <ul>
+            <li>Build logs when something ships.</li>
+            <li>Notes when a lesson is worth keeping.</li>
+            <li>Systems when a process starts to repeat.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span>© <span data-year></span> Jibrin Journal</span>
+        <span>Field notes on software, systems, creative work, and becoming better at the craft.</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#featured">Featured</a>
+        <a href="#latest">Latest</a>
+        <a href="mailto:jbxxnn6@gmail.com">Contact</a>
+      </nav>
+    </footer>
+
+    <script src="/posts.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

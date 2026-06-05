@@ -3,95 +3,181 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Jibrin Journal — essays, field notes, systems, and quiet progress." />
-    <title>Jibrin Journal</title>
+    <meta name="description" content="WordPress websites, redesigns, speed fixes, and maintenance for local businesses that want more calls, bookings, and quote requests." />
+    <title>WordPress Websites for Local Businesses | Jibrin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="landing-page">
+    <header class="site-header landing-header">
       <a class="brand" href="/" aria-label="Jibrin Journal home">
         <img class="brand-mark" src="/assets/jbxxnn.svg" alt="" aria-hidden="true" />
-        <span>Jibrin Journal</span>
+        <span>Jibrin</span>
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="#featured">Featured</a>
-        <a href="#latest">Latest</a>
-        <a href="#about">About</a>
+      <nav class="top-nav" aria-label="Landing page navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Packages</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-action" href="mailto:jbxxnn6@gmail.com">Contact</a>
+      <a class="header-action" href="mailto:jbxxnn6@gmail.com?subject=WordPress%20website%20help">Get a free audit</a>
     </header>
 
-    <main class="page-shell">
-      <section class="hero-grid" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Personal blog / journal</p>
-          <h1 id="page-title">Notes from building useful things, slowly and seriously.</h1>
-          <p class="hero-text">A public operating log on client work, software, systems, automation, and the small decisions that compound into better work.</p>
+    <main class="page-shell landing-shell">
+      <section class="wp-hero" aria-labelledby="wp-title">
+        <div class="wp-hero-copy">
+          <p class="eyebrow">WordPress websites / Local business growth</p>
+          <h1 id="wp-title">Turn your website into a better sales tool.</h1>
+          <p class="hero-text">I help local businesses fix, redesign, and maintain WordPress websites so more visitors become calls, bookings, quote requests, and customers.</p>
+          <div class="button-row">
+            <a class="primary-button" href="mailto:jbxxnn6@gmail.com?subject=Free%20WordPress%20website%20audit&body=Hi%20Jibrin%2C%20I%20want%20a%20free%20WordPress%20website%20audit.%0A%0ABusiness%20name%3A%0AWebsite%3A%0AWhat%20I%20need%20help%20with%3A">Request a free audit</a>
+            <a class="secondary-button" href="#services">See what I fix</a>
+          </div>
+          <p class="microcopy">No pressure. Send your current website and I’ll reply with 3 practical improvements.</p>
         </div>
-        <aside class="hero-panel" id="about">
-          <p class="panel-label">Current focus</p>
-          <p>Building and maintaining software for real clients, improving my systems, experimenting with media, and documenting the lessons clearly as I go.</p>
+        <aside class="audit-card" aria-label="Audit checklist preview">
+          <p class="panel-label">Free mini-audit includes</p>
+          <ul class="check-list">
+            <li>Mobile usability review</li>
+            <li>Speed and trust issues</li>
+            <li>Lead capture/contact form check</li>
+            <li>3 clear fixes to get more enquiries</li>
+          </ul>
         </aside>
       </section>
 
-      <section class="blog-toolbar" aria-label="Blog tools">
-        <div class="category-tabs" data-categories>
-          <button class="active" data-category="All">All Posts</button>
-        </div>
-        <label class="search-box">
-          <span>Search posts</span>
-          <input type="search" placeholder="Search posts" data-search />
-        </label>
+      <section class="stats-strip" aria-label="Website problems I solve">
+        <div><strong>Slow site?</strong><span>Speed cleanup and lighter pages.</span></div>
+        <div><strong>No leads?</strong><span>Clear calls-to-action and better forms.</span></div>
+        <div><strong>Outdated look?</strong><span>Modern redesign without overcomplication.</span></div>
       </section>
 
-      <section class="section-block" id="featured" aria-labelledby="featured-title">
-        <div class="section-heading">
-          <p class="eyebrow">Selected</p>
-          <h2 id="featured-title">Featured essays</h2>
+      <section class="section-block" id="services" aria-labelledby="services-title">
+        <div class="section-heading landing-heading">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">WordPress help that solves real business problems.</h2>
         </div>
-        <div class="article-grid featured-grid" data-featured-grid></div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Website redesigns</h3>
+            <p>Refresh an old WordPress site with a cleaner layout, stronger messaging, mobile-first pages, and clearer paths to contact you.</p>
+          </article>
+          <article class="service-card">
+            <span>02</span>
+            <h3>Speed + mobile fixes</h3>
+            <p>Improve slow pages, heavy images, plugin clutter, and mobile experience so visitors do not leave before they can enquire.</p>
+          </article>
+          <article class="service-card">
+            <span>03</span>
+            <h3>Lead capture setup</h3>
+            <p>Add or improve contact forms, booking links, WhatsApp/call buttons, quote request flows, and simple conversion tracking.</p>
+          </article>
+          <article class="service-card">
+            <span>04</span>
+            <h3>Care + maintenance</h3>
+            <p>Keep WordPress updated, backed up, secured, and edited monthly so your website stays useful after launch.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="section-block" id="latest" aria-labelledby="latest-title">
-        <div class="section-heading">
-          <p class="eyebrow">Archive</p>
-          <h2 id="latest-title">Latest notes</h2>
-        </div>
-        <div class="article-grid" data-posts-grid></div>
-      </section>
-
-      <section class="cta-grid" aria-labelledby="closing-title">
+      <section class="split-section" id="process" aria-labelledby="process-title">
         <div>
-          <p class="eyebrow">Operating rhythm</p>
-          <h2 id="closing-title">Document the work. Improve the system.</h2>
+          <p class="eyebrow">Process</p>
+          <h2 id="process-title">Simple, practical, and focused on results.</h2>
+          <p>I don’t start by pushing a full rebuild. First we identify what is blocking leads, then choose the smallest useful fix or the right full redesign.</p>
+        </div>
+        <ol class="steps-list">
+          <li><strong>Send your website.</strong><span>I review the site, mobile layout, messaging, speed, and enquiry flow.</span></li>
+          <li><strong>Get 3 recommended fixes.</strong><span>You’ll see what should change and why it matters for calls, bookings, or sales.</span></li>
+          <li><strong>Choose a package.</strong><span>We can do a quick cleanup, a full redesign, or ongoing monthly care.</span></li>
+        </ol>
+      </section>
+
+      <section class="section-block" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-heading landing-heading">
+          <p class="eyebrow">Packages</p>
+          <h2 id="pricing-title">Start small or rebuild properly.</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="price-label">Quick fix</p>
+            <h3>Website Cleanup</h3>
+            <p class="price">From $300</p>
+            <ul>
+              <li>Speed and mobile fixes</li>
+              <li>Basic SEO cleanup</li>
+              <li>Contact/booking improvements</li>
+              <li>Security and backup setup</li>
+            </ul>
+          </article>
+          <article class="price-card highlighted">
+            <p class="price-label">Most useful</p>
+            <h3>WordPress Redesign</h3>
+            <p class="price">From $1,000</p>
+            <ul>
+              <li>Modern homepage and key pages</li>
+              <li>Clear service positioning</li>
+              <li>Mobile-first layout</li>
+              <li>Lead forms and call buttons</li>
+            </ul>
+          </article>
+          <article class="price-card">
+            <p class="price-label">Monthly care</p>
+            <h3>Maintenance</h3>
+            <p class="price">From $50/mo</p>
+            <ul>
+              <li>WordPress/plugin updates</li>
+              <li>Backups and security checks</li>
+              <li>Small edits each month</li>
+              <li>Monthly status report</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-grid landing-cta" aria-labelledby="cta-title">
+        <div>
+          <p class="eyebrow">Free first step</p>
+          <h2 id="cta-title">Want me to check your website?</h2>
         </div>
         <div class="cta-copy">
-          <p>This journal keeps track of the decisions, client-work lessons, systems, experiments, and small observations that make the next step clearer.</p>
-          <ul>
-            <li>Build logs when something ships.</li>
-            <li>Notes when a lesson is worth keeping.</li>
-            <li>Systems when a process starts to repeat.</li>
-          </ul>
+          <p>Send your website link and I’ll point out 3 practical improvements that could help you get more enquiries from the traffic you already have.</p>
+          <div class="button-row">
+            <a class="primary-button" href="mailto:jbxxnn6@gmail.com?subject=Free%20WordPress%20website%20audit">Email for free audit</a>
+            <a class="secondary-button" href="/journal/">Read the journal</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq" aria-labelledby="faq-title">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq-grid">
+          <article><h3>Do I need a new website?</h3><p>Not always. If the foundation is good, a cleanup may be enough. If the site is outdated, confusing, or hard to use on mobile, a redesign may be better.</p></article>
+          <article><h3>Can you work on my existing WordPress site?</h3><p>Yes. I can improve existing WordPress sites, fix issues, or rebuild the important pages while keeping the same domain.</p></article>
+          <article><h3>Who is this best for?</h3><p>Local service businesses, restaurants, salons, agencies, consultants, and anyone whose website should help generate calls, bookings, or quote requests.</p></article>
+          <article><h3>What should I send first?</h3><p>Send your website link, business type, city, and what you want more of: calls, bookings, leads, sales, or trust.</p></article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-brand">
-        <span>© <span data-year></span> Jibrin Journal</span>
-        <span>Field notes on software, systems, creative work, and becoming better at the craft.</span>
+        <span>© <span data-year></span> Jibrin</span>
+        <span>WordPress websites, redesigns, and maintenance for businesses that want a more useful website.</span>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#featured">Featured</a>
-        <a href="#latest">Latest</a>
-        <a href="mailto:jbxxnn6@gmail.com">Contact</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Packages</a>
+        <a href="mailto:jbxxnn6@gmail.com?subject=WordPress%20website%20help">Contact</a>
       </nav>
     </footer>
 
-    <script src="/posts.js"></script>
-    <script src="/app.js"></script>
+    <script>
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
