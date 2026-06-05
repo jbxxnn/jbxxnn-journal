@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/wordpress", "destination": "/", "permanent": true },
+    { "source": "/wordpress/", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/:slug", "destination": "/post.html" }
   ],
