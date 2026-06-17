@@ -502,6 +502,73 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
 .steps-list span { color: var(--muted); font-size: 14px; line-height: 1.5; }
 .audit-section { background: linear-gradient(135deg, #fff, #f5f5f5); }
 .audit-list li { min-height: 82px; }
+.system-flow-section, .demo-board-section {
+  margin-top: 52px;
+  padding: clamp(28px, 5vw, 50px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.system-flow-section .section-heading p,
+.demo-board-section .section-heading p {
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.flow-grid, .crm-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.flow-grid article, .crm-board article {
+  min-height: 210px;
+  padding: 22px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(250,250,250,.74);
+}
+.flow-grid span {
+  font-family: var(--mono);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+.flow-grid strong, .crm-board strong {
+  display: block;
+  font-size: 19px;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+.flow-grid p, .crm-board p, .crm-board small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.crm-board { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.crm-board article { min-height: 190px; background: #fbfbfb; }
+.status-pill {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border: 1px solid var(--line);
+}
+.status-pill.new { background: #eef6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.status-pill.contacted { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
+.status-pill.follow { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.status-pill.booked { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
 .industries-section {
   margin-top: 52px;
   display: grid;
@@ -825,7 +892,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .hero-grid, .cta-grid, .wp-hero, .split-section, .industries-section, .founder-note, .contact-section { grid-template-columns: 1fr; }
   .hero-panel { border-left: 0; border-top: 1px solid var(--line); }
   .audit-card { min-height: auto; border-left: 0; border-top: 1px solid var(--line); }
-  .stats-strip, .proof-strip, .service-grid, .pricing-grid, .faq-grid, .problem-grid { grid-template-columns: 1fr; }
+  .stats-strip, .proof-strip, .service-grid, .pricing-grid, .faq-grid, .problem-grid, .flow-grid, .crm-board { grid-template-columns: 1fr; }
   .service-grid, .pricing-grid, .faq-grid, .problem-grid { border-left: 1px solid var(--line); }
   .wp-hero-copy h1 { font-size: clamp(42px, 14vw, 64px); line-height: .94; }
   .primary-button, .secondary-button { width: 100%; }

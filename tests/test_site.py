@@ -28,14 +28,16 @@ class StaticSiteTests(unittest.TestCase):
     def test_homepage_contains_wordpress_lead_generation_positioning(self):
         html = read('index.html')
         self.assertIn('Jibrin Web Care', html)
-        self.assertIn('Your WordPress website should bring enquiries', html)
+        self.assertIn('Turn it into a lead system', html)
+        self.assertIn('CRM row is created', html)
         self.assertIn('/api/audit-submit', html)
         self.assertIn('/clinic-lead-system/', html)
         self.assertIn('data-audit-form', html)
 
     def test_clinic_lead_system_page_contains_core_offer(self):
         html = read('clinic-lead-system/index.html')
-        self.assertIn('Stop losing patient enquiries', html)
+        self.assertIn('patient enquiry system', html)
+        self.assertIn('Demo CRM board', html)
         self.assertIn('Google Sheet CRM', html)
         self.assertIn('follow-up templates', html)
         self.assertIn('/api/audit-submit', html)
