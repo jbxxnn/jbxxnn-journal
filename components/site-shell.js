@@ -9,13 +9,13 @@ export function MainHeader() {
         <img className="brand-mark" src="/assets/jbxxnn.svg" alt="" aria-hidden="true" />
         <span className={`${GeistSans.className}`}>jbxxnn</span>
       </Link>
-      <nav className={`top-nav ${GeistMono.className}`} aria-label="Landing page navigation">
+      <nav className={`top-nav ${GeistSans.className}`} aria-label="Landing page navigation">
         <Link href="/#case-study">Case study</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#process">Process</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
-      <Link className={`header-action ${GeistMono.className}`} href="/#contact">
+      <Link className={`header-action ${GeistSans.className}`} href="/#contact">
         Book a discovery call
       </Link>
     </header>

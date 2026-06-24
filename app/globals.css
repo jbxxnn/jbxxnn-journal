@@ -895,7 +895,7 @@ code { font-family: var(--mono); font-size: .92em; background: var(--surface-sof
   .audit-card { min-height: auto; border-left: 0; border-top: 1px solid var(--line); }
   .stats-strip, .proof-strip, .service-grid, .pricing-grid, .faq-grid, .problem-grid, .flow-grid, .crm-board { grid-template-columns: 1fr; }
   .service-grid, .pricing-grid, .faq-grid, .problem-grid { border-left: 1px solid var(--line); }
-  .wp-hero-copy h1 { font-size: clamp(42px, 14vw, 64px); line-height: .94; }
+  .wp-hero-copy h1 { font-size: clamp(42px, 10vw, 35px); line-height: .94; }
   .primary-button, .secondary-button { width: 100%; }
   .blog-toolbar { align-items: stretch; flex-direction: column; }
   .search-box { display: none; }

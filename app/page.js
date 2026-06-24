@@ -10,22 +10,22 @@ export default function HomePage() {
       <main className="page-shell landing-shell">
         <section className="wp-hero wp-hero-premium" aria-labelledby="wp-title">
           <div className="wp-hero-copy">
-            <p className={`eyebrow ${GeistMono.className}`}>Operational systems for growing service businesses</p>
+            <p className={`eyebrow ${GeistSans.className}`}>Operational systems for growing service businesses</p>
             <h1 id="wp-title" className={`${GeistSans.className}`} >
               When your business outgrows its booking tools, I help design the system that
               fits the way you actually operate.
             </h1>
-            <p className={`hero-text ${GeistMono.className}`}>
+            <p className={`hero-text ${GeistSans.className}`}>
               I work with service businesses that have grown more complex than their current
               setup. More staff. More services. More locations. More moving parts. I help make
               sense of the friction underneath that growth and design systems that make the
               business easier to run.
             </p>
             <div className="button-row">
-              <a className={`primary-button ${GeistMono.className}`} href="#contact">Book a discovery call</a>
-              <a className={`secondary-button ${GeistMono.className}`} href="#case-study">See the case study</a>
+              <a className={`primary-button ${GeistSans.className}`} href="#contact">Book a discovery call</a>
+              <a className={`secondary-button ${GeistSans.className}`} href="#case-study">See the case study</a>
             </div>
-            <p className={`microcopy ${GeistMono.className}`}>
+            <p className={`microcopy ${GeistSans.className}`}>
               Best suited to appointment-based and multi-location service businesses dealing
               with growth, coordination, and operational complexity.
             </p>
