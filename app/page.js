@@ -1,5 +1,7 @@
 import { InquiryForm } from '../components/inquiry-form';
 import { MainFooter, MainHeader } from '../components/site-shell';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
 export default function HomePage() {
   return (
@@ -8,39 +10,39 @@ export default function HomePage() {
       <main className="page-shell landing-shell">
         <section className="wp-hero wp-hero-premium" aria-labelledby="wp-title">
           <div className="wp-hero-copy">
-            <p className="eyebrow">Operational systems for growing service businesses</p>
-            <h1 id="wp-title">
+            <p className={`eyebrow ${GeistMono.className}`}>Operational systems for growing service businesses</p>
+            <h1 id="wp-title" className={`${GeistSans.className}`} >
               When your business outgrows its booking tools, I help design the system that
               fits the way you actually operate.
             </h1>
-            <p className="hero-text">
+            <p className={`hero-text ${GeistMono.className}`}>
               I work with service businesses that have grown more complex than their current
               setup. More staff. More services. More locations. More moving parts. I help make
               sense of the friction underneath that growth and design systems that make the
               business easier to run.
             </p>
             <div className="button-row">
-              <a className="primary-button" href="#contact">Book a discovery call</a>
-              <a className="secondary-button" href="#case-study">See the case study</a>
+              <a className={`primary-button ${GeistMono.className}`} href="#contact">Book a discovery call</a>
+              <a className={`secondary-button ${GeistMono.className}`} href="#case-study">See the case study</a>
             </div>
-            <p className="microcopy">
+            <p className={`microcopy ${GeistMono.className}`}>
               Best suited to appointment-based and multi-location service businesses dealing
               with growth, coordination, and operational complexity.
             </p>
           </div>
-          <aside className="audit-card diagnostic-card" aria-label="Audit checklist preview">
+          <aside className={`audit-card diagnostic-card ${GeistSans.className}`} aria-label="Audit checklist preview">
             <p className="panel-label">Common pressure points</p>
             <h2>Where operations start to feel heavier than they should.</h2>
             <ul className="check-list">
-              <li>Scheduling gets messy once multiple staff, services, or locations are involved.</li>
-              <li>The team leans on spreadsheets, manual workarounds, or side-channel coordination.</li>
-              <li>Important information lives across booking tools, inboxes, notes, and staff memory.</li>
-              <li>The business keeps growing, but the workflow underneath it does not keep up.</li>
+              <li>Scheduling breaks with staff complexity.</li>
+              <li>Teams rely on manual coordination.</li>
+              <li>Information is scattered across systems.</li>
+              <li>Processes fail to scale growth.</li>
             </ul>
           </aside>
         </section>
 
-        <section className="proof-strip" aria-label="Core outcomes">
+        <section className={`proof-strip ${GeistSans.className}`} aria-label="Core outcomes">
           <div>
             <strong>Enquiry + booking</strong>
             <span>See where the customer journey enters the business and where it starts to break down.</span>
@@ -55,7 +57,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section-block problem-section" aria-labelledby="problem-title">
+        <section className={`section-block problem-section ${GeistSans.className}`} aria-labelledby="problem-title">
           <div className="section-heading landing-heading">
             <p className="eyebrow">The problem</p>
             <h2 id="problem-title">
@@ -79,7 +81,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section-block" aria-labelledby="system-proof-title">
+        <section className={`section-block ${GeistSans.className}`} aria-labelledby="system-proof-title">
           <div className="section-heading landing-heading">
             <p className="eyebrow">What this work actually covers</p>
             <h2 id="system-proof-title">From customer enquiry and booking to staff coordination, tracking, and day-to-day operations.</h2>
@@ -93,7 +95,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="split-section audit-section" id="case-study" aria-labelledby="audit-title">
+        <section className={`split-section audit-section ${GeistSans.className}`} id="case-study" aria-labelledby="audit-title">
           <div>
             <p className="eyebrow">Case study</p>
             <h2 id="audit-title">What started as a small website issue turned into a much bigger operations job.</h2>
@@ -106,7 +108,7 @@ export default function HomePage() {
           </ol>
         </section>
 
-        <section className="section-block" id="services" aria-labelledby="services-title">
+        <section className={`section-block ${GeistSans.className}`} id="services" aria-labelledby="services-title">
           <div className="section-heading landing-heading">
             <p className="eyebrow">Services</p>
             <h2 id="services-title">Practical systems work for service businesses dealing with operational complexity.</h2>
@@ -119,7 +121,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="industries-section" id="industries" aria-labelledby="industries-title">
+        <section className={`industries-section ${GeistSans.className}`} id="industries" aria-labelledby="industries-title">
           <div>
             <p className="eyebrow">Who this is for</p>
             <h2 id="industries-title">Best suited to service businesses that are already operating, already using software, and starting to feel the strain of complexity.</h2>
@@ -129,7 +131,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="split-section process-section" id="process" aria-labelledby="process-title">
+        <section className={`split-section process-section ${GeistSans.className}`} id="process" aria-labelledby="process-title">
           <div>
             <p className="eyebrow">Process</p>
             <h2 id="process-title">Understand the operational reality first. Decide on the right system change second.</h2>
@@ -142,7 +144,7 @@ export default function HomePage() {
           </ol>
         </section>
 
-        <section className="section-block" id="pricing" aria-labelledby="pricing-title">
+        <section className={`section-block ${GeistSans.className}`} id="pricing" aria-labelledby="pricing-title">
           <div className="section-heading landing-heading">
             <p className="eyebrow">What businesses usually need relief from</p>
             <h2 id="pricing-title">Most businesses do not need more software. They need relief from the strain underneath the current setup.</h2>
@@ -155,7 +157,7 @@ export default function HomePage() {
           <p className="pricing-note">The goal is to understand the pressure points clearly and decide whether the next step is process improvement, system restructuring, or custom software.</p>
         </section>
 
-        <section className="founder-note" aria-labelledby="founder-title">
+        <section className={`founder-note ${GeistSans.className}`} aria-labelledby="founder-title">
           <div>
             <p className="eyebrow">About</p>
             <h2 id="founder-title">I am interested in the problems behind the obvious ones.</h2>
@@ -163,7 +165,7 @@ export default function HomePage() {
           <p>I’m Jibrin. I tend to get useful when a business has grown past the limits of its current setup. Booking tools, spreadsheets, admin routines, and disconnected software start creating more friction than they remove. What looks like a website issue can turn out to be a booking issue. What looks like a booking issue can turn out to be a coordination problem. That is the level I like to work at.</p>
         </section>
 
-        <section className="contact-section" id="contact" aria-labelledby="contact-title">
+        <section className={`contact-section ${GeistSans.className}`} id="contact" aria-labelledby="contact-title">
           <div className="contact-copy">
             <p className="eyebrow">Discovery call</p>
             <h2 id="contact-title">If operations feel more complicated than they should, let’s talk.</h2>
@@ -173,7 +175,7 @@ export default function HomePage() {
           <InquiryForm />
         </section>
 
-        <section className="faq-section" aria-labelledby="faq-title">
+        <section className={`faq-section ${GeistSans.className}`} aria-labelledby="faq-title">
           <div className="section-heading landing-heading">
             <p className="eyebrow">FAQ</p>
             <h2 id="faq-title">Common questions</h2>
