@@ -25,13 +25,13 @@ class StaticSiteTests(unittest.TestCase):
         ]:
             self.assertTrue((ROOT / path).exists(), f'{path} missing')
 
-    def test_homepage_contains_wordpress_lead_generation_positioning(self):
+    def test_homepage_contains_operational_systems_positioning(self):
         html = read('index.html')
-        self.assertIn('Jibrin Web Care', html)
-        self.assertIn('Turn it into a lead system', html)
-        self.assertIn('CRM row is created', html)
+        self.assertIn('Operational systems for growing service businesses', html)
+        self.assertIn('When your business outgrows its booking tools', html)
+        self.assertIn('Goud Echo', html)
         self.assertIn('/api/audit-submit', html)
-        self.assertIn('/clinic-lead-system/', html)
+        self.assertIn('Request a discovery call', html)
         self.assertIn('data-audit-form', html)
 
     def test_clinic_lead_system_page_contains_core_offer(self):
