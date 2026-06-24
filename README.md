@@ -1,39 +1,59 @@
-# Jibrin Journal
+# Jibrin Site + Journal
 
-A clean personal blog/journal with a Vercel-inspired editorial grid, restrained typography, search, categories, featured posts, and static deployment.
+This repository now runs as a **Next.js App Router** project deployed on Vercel.
 
-## Edit posts
+It includes:
+- the main `jbxxnn.com` homepage positioned around operational systems for service businesses
+- the journal at `/journal`
+- individual journal entries at `/:slug`
+- the clinic lead system landing page at `/clinic-lead-system`
+- the lead capture form API at `/api/audit-submit`
 
-Posts live in `posts.js`. Add a new object to `window.JOURNAL_POSTS`:
+## Project structure
 
-```js
-{
-  slug: 'my-new-entry',
-  title: 'My new entry',
-  category: 'Journal',
-  date: '2026-05-24',
-  author: 'Jibrin Faruna',
-  readingTime: '3 min read',
-  featured: false,
-  excerpt: 'Short summary...',
-  body: ['Paragraph one.', 'Paragraph two.']
-}
-```
+- `app/page.js` — main homepage
+- `app/journal/page.js` — journal index
+- `app/[slug]/page.js` — journal post routes
+- `app/clinic-lead-system/page.js` — clinic lead system page
+- `app/api/audit-submit/route.js` — Google Sheets form capture route
+- `lib/posts.js` — journal post data
+- `components/` — shared UI pieces
+- `public/assets/` — static assets
 
-## Local preview
+## Local development
+
+Install dependencies:
 
 ```bash
-python3 -m http.server 3000
+npm install
 ```
 
-Then open `http://localhost:3000`.
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+## Build
+
+```bash
+npm run build
+```
 
 ## Tests
 
 ```bash
-python3 -m unittest discover -s tests -p 'test_*.py'
+npm test
 ```
 
-## Deployment
+## Notes
 
-This repository is static and deploys cleanly to Vercel.
+- `/wordpress` redirects to `/`
+- `/lead-capture-system` redirects to `/clinic-lead-system`
+- form submissions still use Google Sheets via the server route
